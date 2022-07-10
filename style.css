@@ -1,0 +1,113 @@
+/*
+## Colors
+
+### Primary
+
+- Red: hsl(0, 78%, 62%)
+- Cyan: hsl(180, 62%, 55%)
+- Orange: hsl(34, 97%, 64%)
+- Blue: hsl(212, 86%, 64%)
+
+### Neutral
+
+- Very Dark Blue: hsl(234, 12%, 34%)
+- Grayish Blue: hsl(229, 6%, 66%)
+- Very Light Gray: hsl(0, 0%, 98%)
+
+- Font size: 15px
+
+### Fonts
+
+- Family: [Poppins](https://fonts.google.com/specimen/Poppins)
+- Weights: 200, 400, 600
+*/
+body {
+  background-color: hsl(229, 6%, 66%, 0.1);
+}
+.head {
+  text-align: center;
+  font-family: Poppins;
+}
+.head h1 {
+  color: hsl(234, 12%, 34%);
+  font-weight: 400;
+}
+.head p {
+  font-weight: 200;
+}
+.head h2 {
+  font-size: 30px;
+}
+.card1 {
+  background-color: hsl(0, 0%, 98%);
+  border-top: 3px solid hsl(180, 62%, 55%);
+  padding: 10px;
+  border-radius: 5px;
+  width: 300px;
+  grid-area: card1;
+  box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.3);
+  font-family: Poppins;
+  font-weight: 400;
+}
+.card2 {
+  background-color: hsl(0, 0%, 98%);
+  border-top: 2px solid hsl(0, 78%, 62%);
+  padding: 10px;
+  border-radius: 5px;
+  font-family: Poppins;
+  box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.3);
+  grid-area: card2;
+  font-weight: 400;
+  width: 300px;
+}
+.card3 {
+  background-color: hsl(0, 0%, 98%);
+  border-top: 2px solid hsl(34, 97%, 64%);
+  border-radius: 5px;
+  padding: 10px;
+  font-family: Poppins;
+  width: 300px;
+  box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.3);
+  grid-area: card3;
+  font-weight: 400;
+}
+.card4 {
+  background-color: hsl(0, 0%, 98%);
+  border-top: 2px solid hsl(212, 86%, 64%);
+  padding: 10px;
+  border-radius: 5px;
+  font-weight: 400;
+  font-family: Poppins;
+  width: 300px;
+  box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.3);
+  grid-area: card4;
+}
+.image {
+  float: right;
+}
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+.grid {
+  display: grid;
+
+  place-items: center;
+  place-content: start space-evenly;
+  grid-template-areas:
+    "card1 card2 card4"
+    "card1 card3 card4";
+  gap: 10px;
+}
+@media (max-width: 500px) {
+  .grid {
+    grid-template-areas:
+      "card1"
+      "card2"
+      "card3"
+      "card4";
+  }
+}
